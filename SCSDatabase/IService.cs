@@ -8,10 +8,11 @@ namespace SCSDatabase
 	{
 		public Guid ID { get; set; }
         public DateTime StartTime { get; set; }
-        public float Price { get; set; }
-        public bool Completed { get; set; }
         public TimeLog MyTimeLog { get; set; }
         public List<Purchase> Purchases { get; set; }
+
+        public float Price { get; set; }
+        public bool Completed { get; set; }
 
         public void CompleteService()
         {

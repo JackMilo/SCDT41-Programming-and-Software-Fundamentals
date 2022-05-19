@@ -7,7 +7,38 @@ namespace SCSDatabase
 {
 	public class Significant : IService
 	{
-		public Levels Priority { get; set; }
-		public SignificantServiceType Type { get; set; }
-	}
+        public Guid ID { get; set; }
+        public DateTime StartTime { get; set; }
+        public TimeLog MyTimeLog { get; set; }
+        public List<Purchase> Purchases { get; set; }
+
+        public float Price { get; set; }
+        public bool Completed { get; set; }
+        public Levels Priority { get; set; }
+        public SignificantServiceType Type { get; set; }
+
+        public Significant(float _Price, Enums.Levels _Priority, Enums.SignificantServiceType _Type)
+        {
+            ID = Guid.NewGuid();
+            StartTime = DateTime.Now;
+            MyTimeLog = new TimeLog();
+
+            Price = _Price;
+            Completed = false;
+            Priority = _Priority;
+            Type = _Type;
+        }
+
+        public void CompleteService()
+        {
+            MyTimeLog.CompletionTime = DateTime.Now;
+            MyTimeLog.Difference = MyTimeLog.StartTime - MyTimeLog.CompletionTime;
+            Completed = true;
+        }
+
+        public void CreatePurchase()
+        {
+            Purchases.Add(new Purchase());
+        }
+    }
 }
