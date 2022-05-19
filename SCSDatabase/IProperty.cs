@@ -12,9 +12,13 @@ namespace SCSDatabase
         public float Price { get; set; }
         public List<IService> Services { get; set; }
 
-        public void CreateService()
+        public void CreateSignificantService()
         {
-
+            Services.Add(new Significant());
+        }
+        public void CreateCosmeticService()
+        {
+            Services.Add(new Cosmetic());
         }
     }
 }

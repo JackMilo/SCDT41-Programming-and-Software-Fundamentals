@@ -10,6 +10,6 @@ namespace SCSDatabase
         public Guid ID { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime CompletionTime { get; set; }
-        public DateTime Difference { get; set; }
+        public TimeSpan Difference { get; set; }
     }
 }

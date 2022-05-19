@@ -14,7 +14,14 @@ namespace SCSDatabase
 
         public void UpdateInfo()
         {
-
+            Console.WriteLine("Update:\nFirst Name:");
+            FName = Convert.ToString(Console.ReadLine());
+            Console.WriteLine("Last Name:");
+            SName = Convert.ToString(Console.ReadLine());
+            Console.WriteLine("Email:");
+            Email = Convert.ToString(Console.ReadLine());
+            Console.WriteLine("Phone:");
+            Phone = Convert.ToString(Console.ReadLine());
         }
     }
 }

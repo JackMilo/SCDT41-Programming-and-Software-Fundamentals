@@ -43,5 +43,10 @@ namespace SCSDatabase
 			MOPPING,
 			DUSTING
 		}
+		public enum SigOrCom
+        {
+			SIGNIFICANT,
+			COSMETIC
+        }
 	}
 }
