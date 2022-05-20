@@ -16,7 +16,7 @@ namespace SCSDatabase
         public bool Completed { get; set; }
         public CosmeticServiceType Type { get; set; }
 
-        public Cosmetic(float _Price, Enums.Levels _Priority, Enums.CosmeticServiceType _Type)
+        public Cosmetic(float _Price, Enums.CosmeticServiceType _Type)
         {
             ID = Guid.NewGuid();
             StartTime = DateTime.Now;
