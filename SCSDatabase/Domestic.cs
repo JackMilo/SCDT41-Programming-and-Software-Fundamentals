@@ -27,11 +27,11 @@ namespace SCSDatabase
 
         public void CreateSignificantService(float _Price, Enums.Levels _Priority, Enums.SignificantServiceType _Type)
         {
-            Services.Add(new Significant(_Price, _Priority, _Type));
+            Services?.Add(new Significant(_Price, _Priority, _Type));
         }
         public void CreateCosmeticService(float _Price, Enums.CosmeticServiceType _Type)
         {
-            Services.Add(new Cosmetic(_Price, _Type));
+            Services?.Add(new Cosmetic(_Price, _Type));
         }
     }
 }
