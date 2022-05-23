@@ -10,5 +10,13 @@ namespace SCSDatabase
         public float Cost { get; set; }
         public string Name { get; set; }
         public int Quantity { get; set; }
+
+        public Purchase(float _Cost, string _Name, int _Quantity)
+        {
+            ID = Guid.NewGuid();
+            Cost = _Cost;
+            Name = _Name;
+            Quantity = _Quantity;
+        }
     }
 }

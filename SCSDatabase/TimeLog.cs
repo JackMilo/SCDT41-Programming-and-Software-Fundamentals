@@ -11,5 +11,11 @@ namespace SCSDatabase
         public DateTime StartTime { get; set; }
         public DateTime CompletionTime { get; set; }
         public TimeSpan Difference { get; set; }
+
+        public TimeLog()
+        {
+            ID = Guid.NewGuid();
+            StartTime = DateTime.Now;
+        }
     }
 }

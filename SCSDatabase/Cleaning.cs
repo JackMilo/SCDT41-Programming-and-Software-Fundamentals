@@ -55,9 +55,9 @@ namespace SCSDatabase
             Service.CompleteService();
         }
 
-        public void RequestPurchase()
+        public void RequestPurchase(float _Cost, string _Name, int _Quantity)
         {
-            Purchases.Add(new Purchase());
+            Purchases.Add(new Purchase(_Cost, _Name, _Quantity));
         }
     }
 }

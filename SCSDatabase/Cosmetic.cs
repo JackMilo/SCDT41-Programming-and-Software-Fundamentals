@@ -8,7 +8,6 @@ namespace SCSDatabase
 	public class Cosmetic : IService
 	{
         public Guid ID { get; set; }
-        public DateTime StartTime { get; set; }
         public TimeLog MyTimeLog { get; set; }
         public List<Purchase> Purchases { get; set; }
 
@@ -19,7 +18,6 @@ namespace SCSDatabase
         public Cosmetic(float _Price, Enums.CosmeticServiceType _Type)
         {
             ID = Guid.NewGuid();
-            StartTime = DateTime.Now;
             MyTimeLog = new TimeLog();
 
             Price = _Price;
@@ -34,9 +32,9 @@ namespace SCSDatabase
             Completed = true;
         }
 
-        public void CreatePurchase()
+        public void CreatePurchase(float _Cost, string _Name, int _Quantity)
         {
-            Purchases.Add(new Purchase());
+            Purchases.Add(new Purchase(_Cost, _Name, _Quantity));
         }
     }
 }
