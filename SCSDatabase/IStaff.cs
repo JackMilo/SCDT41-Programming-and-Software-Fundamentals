@@ -11,17 +11,14 @@ namespace SCSDatabase
 		public string Username { get; set; }
 		public string Password { get; set; }
 
-		public void BookService(IProperty Property, Enums.SigOrCom SorC)
+		public void BookSignificantService(IProperty Property, float _Price, Enums.Levels _Priority, Enums.SignificantServiceType _Type)
         {
-			if (SorC == Enums.SigOrCom.SIGNIFICANT)
-            {
-				Property.CreateSignificantService();
-            }
-            else 
-			{
-				Property.CreateCosmeticService();
-			}
+			Property.CreateSignificantService(_Price, _Priority, _Type);
         }
+		public void BookCosmeticService(IProperty Property, float _Price, Enums.CosmeticServiceType _Type)
+		{
+			Property.CreateCosmeticService(_Price, _Type);
+		}
 
 		public void CompleteService(IService Service)
 		{
