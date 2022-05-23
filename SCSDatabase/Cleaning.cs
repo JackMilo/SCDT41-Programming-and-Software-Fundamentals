@@ -17,6 +17,18 @@ namespace SCSDatabase
 
         public List<Purchase> Purchases { get; set; }
 
+        public Cleaning(string _FName, string _SName, string _Email, string _Phone, string _Username, string _Password)
+        {
+            ID = Guid.NewGuid();
+            FName = _FName;
+            SName = _SName;
+            Email = _Email;
+            Phone = _Phone;
+
+            Username = _Username;
+            Password = _Password;
+        }
+
         public void UpdateInfo()
         {
             Console.WriteLine("Update:\nFirst Name:");
