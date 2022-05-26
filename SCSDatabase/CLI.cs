@@ -166,7 +166,7 @@ namespace SCSDatabase
 
             Console.WriteLine("Cost: ");
             cost = (float)Convert.ToDecimal(Console.ReadLine());
-            Console.WriteLine("Priority Level: ");
+            Console.WriteLine("Name: ");
             name = Console.ReadLine();
             Console.WriteLine("Service type");
             quantity = Convert.ToInt32(Console.ReadLine());
