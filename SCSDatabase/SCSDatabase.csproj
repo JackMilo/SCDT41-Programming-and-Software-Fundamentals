@@ -6,6 +6,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Cleaning-C-320098.cs" />
+    <Compile Remove="CLI-C-320098.cs" />
+    <Compile Remove="Commercial-C-320098.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Sharprompt" Version="2.4.1" />
   </ItemGroup>
 
